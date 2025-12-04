@@ -65,6 +65,7 @@ Evaluate and predict: Compare true and predicted tags, then display word-level r
 
 ```python
 
+
 import pandas as pd
 import torch
 import torch.nn as nn
@@ -217,8 +218,8 @@ train_losses, val_losses = train_model(model, train_loader, test_loader, loss_fn
 evaluate_model(model, test_loader, X_test, y_test)
 
 # Plot loss
-print('Name: NARAMALA KUMARTEJA')
-print('Register Number: 212223230132')
+print('Name: ESHWAR T')
+print('Register Number: 212223230054')
 history_df = pd.DataFrame({"loss": train_losses, "val_loss": val_losses})
 history_df.plot(title="Loss Over Epochs")
 plt.xlabel("Epoch")
@@ -234,8 +235,8 @@ output = model(sample)
 preds = torch.argmax(output, dim=-1).squeeze().cpu().numpy()
 true = y_test[i].numpy()
 
-print('Name: NARAMALA KUMARTEJA')
-print('Register Number: 212223230132')
+print('Name: ESHWAR T')
+print('Register Number: 212223230054')
 print("{:<15} {:<10} {}\n{}".format("Word", "True", "Pred", "-" * 40))
 for w_id, true_tag, pred_tag in zip(X_test[i], y_test[i], preds):
     if w_id.item() != word2idx["ENDPAD"]:
@@ -245,17 +246,21 @@ for w_id, true_tag, pred_tag in zip(X_test[i], y_test[i], preds):
         print(f"{word:<15} {true_label:<10} {pred_label}")
 
 
+
+
 ```
 
 ### OUTPUT:
 
 ## Loss Vs Epoch Plot:
 
-<img width="733" height="613" alt="image" src="https://github.com/user-attachments/assets/c720e441-63b8-490c-9e10-89652ffff6b9" />
+<img width="982" height="695" alt="image" src="https://github.com/user-attachments/assets/dd70aa3f-8254-4736-9c43-73a9804b0113" />
+
 
 ### Sample Text Prediction:
 
-<img width="408" height="513" alt="image" src="https://github.com/user-attachments/assets/75af87ca-3241-4833-9f69-92c550c5cb22" />
+<img width="642" height="575" alt="image" src="https://github.com/user-attachments/assets/36cbc055-3a33-45e2-b14a-d85e934777d0" />
+
 
 ## RESULT:
 Thus , an LSTM-based model for recognizing the named entities in the text was excuted Successfully.
